@@ -6275,6 +6275,13 @@ let
 
   telepathy_qt = callPackage ../development/libraries/telepathy/qt { };
 
+  tellico = callPackage ../applications/office/tellico {
+    inherit (pkgs.kde4) kdelibs;
+    popplerSupport = true;
+    qjsonSupport = true;
+    taglibSupport = true;
+  };
+
   thrift = callPackage ../development/libraries/thrift { };
 
   tinyxml = tinyxml2;
